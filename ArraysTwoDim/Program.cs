@@ -56,11 +56,11 @@
             jagged[1] = new int[4];
             jagged[2] = new int[5];
 
-            for (int i = 0; i < jagged.GetLength(0); i++)
+            for (int i = 0; i < jagged.Length; i++)
             {
-                for (int j = 0; j < jagged.GetLength(1); j++)
+                for (int j = 0; j < jagged[i].Length; j++)
                 {
-                    Console.Write($"{jagged[i][j]} ");
+                    jagged[i][j] = random.Next(MAX - MIN + 1) + MIN;
                 }
                 Console.WriteLine();
             }
@@ -69,8 +69,9 @@
             {
                 foreach (int el in row)
                 {
-                    Console.WriteLine(el);
+                    Console.Write(el + " ");
                 }
+                Console.WriteLine();
             }
         }
     }
