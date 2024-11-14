@@ -17,9 +17,10 @@
                     Console.WriteLine("Please insert a number (integer)");
                     num = int.Parse(Console.ReadLine()!);
                     if (num > 0) continue;
-                    negativesCount++;
                     if (num == 0) break;
+                    negativesCount++;
                 } while (true);
+                Console.WriteLine("Negatives count: " + negativesCount);
             } catch (FormatException e)
             {
                 Console.WriteLine(e.Message);
