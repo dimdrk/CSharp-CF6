@@ -43,7 +43,7 @@
         {
             bool pallindrome = true;
 
-            for (int i = 0, j = s.Length; i < j; i++, j--)
+            for (int i = 0, j = s.Length - 1; i < j; i++, j--)
             {
                 if (s[i] != s[j])
                 {
