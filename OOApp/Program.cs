@@ -17,6 +17,9 @@ namespace OOApp
                 Lastname = "Giannoutsou"
             };
 
+            anna.Firstname = "Georgia";         // Works as setter
+            Console.WriteLine(anna.Firstname);  // Works as getter
+
             Teacher andreas = new Teacher( 2, "Andreas", "Androutsos");     //Overload constractor - Needs all fields
         }
     }
