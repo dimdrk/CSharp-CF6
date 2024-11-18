@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SinglyLinkList.Model
+namespace SinglyLinkedList.Model
 {
     internal class SLList<T>
     {

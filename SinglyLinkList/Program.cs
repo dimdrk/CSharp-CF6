@@ -1,4 +1,4 @@
-﻿namespace SinglyLinkList
+﻿namespace SinglyLinkedList
 {
     internal class Program
     {
