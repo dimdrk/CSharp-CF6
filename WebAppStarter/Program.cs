@@ -28,7 +28,10 @@ namespace WebAppStarter
 
             app.MapRazorPages();
 
+            app.MapGet("/hello", () => "Hello CF!");
+
             app.Run();
+            Console.WriteLine("Thanks for attenting Coding Factory!");
         }
     }
 }
