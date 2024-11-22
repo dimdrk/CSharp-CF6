@@ -12,5 +12,18 @@ namespace WebApp6Starter.Pages.Students
         public void OnGet()
         {
         }
+
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            TempData["Message"] = $"{InsertStudentDTO?.Firstname} {InsertStudentDTO?.Lastname} added successfully.";
+
+            return RedirectToPage("/Students/Success");
+
+        }
     }
 }
