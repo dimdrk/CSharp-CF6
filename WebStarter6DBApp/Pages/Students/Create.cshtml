@@ -35,6 +35,14 @@
         </div>
     </form>
     <div>
-
+        @if (Model.ErrorArray.Count != 0)
+        {
+            @foreach (var error in Model.ErrorArray)
+            {
+                <div>
+                    <p>@error.Message</p>
+                </div>
+            }
+        }
     </div>
 </div>
