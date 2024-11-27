@@ -1,27 +1,27 @@
-﻿@page "/Students/Create"
-@model WebStarter6DBApp.Pages.Students.CreateModel
+﻿@page "/Students/{id}/Update"
+@model WebStarter6DBApp.Pages.Students.UpdateModel
 @{
-    ViewData["Title"] = "Add Student";
+    ViewData["Title"] = "Update Student";
 }
 
 <div class="container">
-    <h1>Add Student</h1>
+    <h1>Update Student</h1>
 
     <form method="post">
 
         <div class="row mb-3">
             <label for="firstname" class="col-md-1">Όνομα</label>
             <div class="col-md-6">
-                <input asp-for="StudentInsertDTO.Firstname" class="form-control" />
-                <span asp-validation-for="StudentInsertDTO.Firstname" class="text-danger"></span>
+                <input asp-for="StudentUpdateDTO.Firstname" class="form-control" />
+                <span asp-validation-for="StudentUpdateDTO.Firstname" class="text-danger"></span>
             </div>
         </div>
 
         <div class="row mb-3">
             <label for="lastname" class="col-md-1">Επώνυμο</label>
             <div class="col-md-6">
-                <input asp-for="StudentInsertDTO.Lastname" class="form-control" />
-                <span asp-validation-for="StudentInsertDTO.Lastname" class="text-danger"></span>
+                <input asp-for="StudentUpdateDTO.Lastname" class="form-control" />
+                <span asp-validation-for="StudentUpdateDTO.Lastname" class="text-danger"></span>
             </div>
         </div>
 

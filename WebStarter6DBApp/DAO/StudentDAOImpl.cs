@@ -12,7 +12,9 @@ namespace WebStarter6DBApp.DAO
             int insertedId = 0;
             string sql1 = "INSERT INTO Students (Firstname, Lastname) VALUES (@firstname, @lastname);" +
                 "SELECT SCOPE_IDENTITY();";
+
             using SqlConnection connection = DBUtil.GetConnection();
+
             connection.Open();
 
             using SqlCommand command1 = new(sql1, connection);
@@ -22,7 +24,7 @@ namespace WebStarter6DBApp.DAO
             object insertedObject = command1.ExecuteScalar();
             if (insertedObject != null)
             {
-                if (int.TryParse(insertedObject.ToString(), out insertedId))
+                if (!int.TryParse(insertedObject.ToString(), out insertedId))
                 {
                     throw new Exception("Error in inserted id");
                 }

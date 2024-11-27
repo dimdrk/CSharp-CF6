@@ -22,6 +22,7 @@ namespace WebStarter6DBApp.Pages.Students
 
         public void OnGet()
         {
+            // return Page();
         }
 
         public void OnPost()
