@@ -41,6 +41,10 @@ namespace WebStarter6DBApp.Pages.Students
 
         public void OnPost(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return;
+            }
             try
             {
                 StudentUpdateDTO.Id = id;
